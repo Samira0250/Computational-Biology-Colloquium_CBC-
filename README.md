@@ -13,7 +13,7 @@ This project explores the genome of a butterfly sample (SRR25297534) using a com
 
 ### 2. Trimming
 - Tool: Trimmomatic v0.39
-- Parameters: Adapter removal, HEADCROP, LEADING, TRAILING, SLIDINGWINDOW, MINLEN
+- Parameters: Adapter removal
 
 ### 3. Genome Assembly
 - Tool: SPAdes
