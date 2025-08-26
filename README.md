@@ -65,11 +65,12 @@ This project explores the genome of a butterfly sample (SRR25297534) using a com
 - Prjibelski, A., Antipov, D., Meleshko, D., Lapidus, A. and Korobeynikov, A., 2020. Using SPAdes de novo assembler. Current protocols in bioinformatics, 70(1), p.e102.
 - Bolger, A.M., Lohse, M. and Usadel, B., 2014. Trimmomatic: a flexible trimmer for Illumina sequence data. Bioinformatics, 30(15), pp.2114-2120.
 - Reference Genomes:
-  Heliconius melpomene: Heliconius Genome Consortium (2012). Butterfly genome reveals promiscuous exchange of mimicry adaptations among species. Nature, 487, 94-98.
 
-  Bombyx mori: Xia, Q. et al. (2004). A draft sequence for the genome of the domesticated silkworm (Bombyx mori). Science, 306, 1937-1940.
+  1)Heliconius melpomene: Heliconius Genome Consortium (2012). Butterfly genome reveals promiscuous exchange of mimicry adaptations among species. Nature, 487, 94-98.
 
-  Danaus plexippus: Zhan, S. et al. (2011). The genetics of monarch butterfly migration and warning coloration. Nature, 514, 317-321.
+  2) Bombyx mori: Xia, Q. et al. (2004). A draft sequence for the genome of the domesticated silkworm (Bombyx mori). Science, 306, 1937-1940.
+
+  3) Danaus plexippus: Zhan, S. et al. (2011). The genetics of monarch butterfly migration and warning coloration. Nature, 514, 317-321.
 ## Author
 Samira S.
 
