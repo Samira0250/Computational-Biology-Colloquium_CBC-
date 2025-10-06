@@ -1,9 +1,8 @@
 ###############################################################################
 # Persian/Kurdish Ingredient Analysis
 # Finding the prevalence of traditional ingredients in recipe dataset (Bien_ProcICNLG_20202)
-# By: A Kurdish neuroscientist bringing Persian flavors to data science!
+# By: A Kurdish neuroscientist bringing Persian flavors to data science!__SS
 ###############################################################################
-
 library(data.table)
 library(jsonlite)
 library(ggplot2)
@@ -12,7 +11,7 @@ library(viridis)
 library(dplyr)
 
 # Set working directory
-setwd("C:/Users/szs0394/Downloads/Week8")
+setwd("C:/XX")
 
 cat("Loading recipe dataset for Persian ingredient analysis...\n")
 
@@ -206,7 +205,28 @@ p2 <- ggplot(ingredient_results,
 ggsave("persian_ingredients_count.png", p2, width = 12, height = 8, dpi = 300)
 cat("Saved: persian_ingredients_count.png\n")
 
+
+#Pie chart: Top 5 Persian ingredients - Pie chart (no text labels)
+# 3. Top 5 Persian ingredients - Pie chart (percentage labels only)
+top5 <- head(ingredient_results, 5)
+
+p3 <- ggplot(top5, aes(x = "", y = Count, fill = Ingredient)) +
+  geom_col(width = 1, color = "Black") +
+  coord_polar(theta = "y") +
+  geom_text(aes(label = paste0(round(Count / sum(Count) * 100, 1), "%")),
+            position = position_stack(vjust = 0.5),
+            color = "Black", size = 5, fontface = "bold") +
+  scale_fill_viridis_d(option = "plasma") +
+  theme_void() +
+  labs(title = "Top 5 Persian/Kurdish Ingredients") +
+  theme(
+    plot.title = element_text(face = "bold", size = 14, hjust = 0.5),
+    legend.position = "right"
+  )
+
+ggsave("persian_top5_pie.png", p3, width = 8, height = 6, dpi = 300)
 cat("Saved: persian_top5_pie.png\n")
+
 
 # 4. Persian vs Non-Persian overall
 overall_data <- data.frame(
@@ -280,6 +300,7 @@ cat("\nProtein Complexity Analysis:\n")
 cat(rep("-", 70), "\n", sep = "")
 print(protein_complexity[order(-protein_complexity$avg_ingredients), ])
 cat(rep("-", 70), "\n\n", sep = "")
+
 
 # 5. Protein complexity bubble plot
 p5 <- ggplot(protein_complexity, 
